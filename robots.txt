@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /app-ads.txt
+
+Sitemap: https://www.truesquaredigital.com/sitemap.xml

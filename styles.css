@@ -160,6 +160,9 @@ h1 {
 .legal p, .legal li { color: var(--muted); }
 .legal ul { padding-left: 1.2rem; }
 .meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 1.4rem; }
+@media (min-width: 901px) {
+  main.legal:has(h2) { max-width: 68ch; margin-left: auto; margin-right: auto; }
+}
 @media (max-width: 900px) {
   .hero, .game-feature, .grid-3, .coming, .footer-grid { grid-template-columns: 1fr; }
   .nav { flex-direction: column; align-items: flex-start; }
@@ -168,8 +171,15 @@ h1 {
 .social-row { display: flex; gap: 0.65rem; margin-top: 0.85rem; flex-wrap: wrap; }
 .social {
   width: 2.35rem; height: 2.35rem; border-radius: 999px;
-  border: 1px solid var(--line); display: grid; place-items: center;
+  border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0;
   color: var(--ink); background: rgba(255,255,255,0.03);
 }
+.footer-grid a.social {
+  display: flex; align-items: center; justify-content: center;
+  margin: 0; padding: 0;
+}
 .social:hover { border-color: var(--amber); color: var(--amber-soft); background: var(--amber-dim); }
-.social svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+.social svg,
+.social img { display: block; width: 1.05rem; height: 1.05rem; margin: 0; padding: 0; fill: currentColor; }

@@ -1,3 +1,4 @@
+{% raw %}
 ## 2026-10-19 — Studio-wide Privacy Policy + Terms of Use publish (TSQ-Build)
 
 1. **Date and task:** 19 Oct 2026. Replaced the Sit Tight-only `privacy-policy/` and `terms-of-use/` pages with studio-wide TrueSquare Digital documents covering all games, past, present and future, operated by AP Finish Carpentry LLC. Same URLs. Andrew approved the picks at 7:05 AM ET: Ohio law, Fairfield County courts, no arbitration, 13+, $50 cap, address published, effective date = publish date.
@@ -5,3 +6,4 @@
 3. **What worked and how it was verified:** The visible-text grep for `[`, `]`, TODO, NOTE, TBD, draft, PLACEHOLDER, "must match" and `{{` found 0 hits on both pages. The live fetch shows "Effective date: 19 October 2026". scrollWidth equals innerWidth at 390 px, so there is no horizontal scroll.
 4. **What failed and why:** The old live privacy page had shown the internal reminder "This policy must match the Play Data safety form" to the public, because the port from Google Sites copied working notes into page copy.
 5. **Lesson:** Keep legal sources in markdown, with every working note held in a separate NOTES file, and run the internal-note grep on the rendered text before any legal page is committed. Pages deploy from `main`, so a commit there is a publish.
+{% endraw %}

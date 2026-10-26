@@ -51,3 +51,10 @@
 3. **What worked and how it was verified:** 0 broken images and scrollWidth equal to clientWidth at 1280 and 390 on home, privacy policy, games, terms, support and 404. Home has the games, studio, faq and follow anchors. app-ads.txt and CNAME blob hashes are unchanged. The privacy policy body, including the Crashlytics section, is untouched (diff is header and font link only). A grep for double curly braces and brace-percent across the repo shows only the existing raw-wrapped lines in this log.
 4. **What failed and why:** The inline GitHub tools cannot commit files, so the branch push has to come from a cloud agent or another authorised git client. The mockup's .coming grid breakpoint (860) did not match styles.css (900), caught in review and fixed.
 5. **Lesson:** When porting a mockup into a live site, list every in-site anchor and URL the old pages link to before replacing the home page, and keep each one. Check the target repo's breakpoints instead of copying the mockup's.
+
+## 2026-10-26 - Studio site v2: real logo assets after Eye FAIL (PR #7, not merged)
+- Task: Eye failed v1 on 3 assets: live-text wordmark, low-res 112px mark, mid-blast amber still.
+- Approach / cost: one follow-up commit; wordmark image tsq-wordmark.png (900x93) in header and footer of every page, tsq-logo-mark.png (251x256) for header, footer, hero and favicon, amber-carpet.jpg re-exported 540x960 from approved still 05_bomb_full_row. Local headless render, about 15 min.
+- Worked: images displayed at 2x or denser everywhere (hero 120px from 251px source); 0 broken images and no overflow at 1280 and 390 on all 6 pages.
+- Failed: a bulk string replace rewrote the mark src into a bad filename on inner pages and the hero lost its aspect ratio from the new height attribute; both caught by the broken-image and size checks before commit.
+- Lesson: ship brand marks as the real image files from the start, never re-typeset a wordmark in a web font, and always set height auto when adding width and height attributes to a sized image.

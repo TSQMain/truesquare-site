@@ -24,3 +24,8 @@ Static site for **https://www.truesquaredigital.com** (GitHub Pages).
 
 ## Local preview
 Open `index.html` via any static server from this folder, e.g. `python3 -m http.server 8080`.
+
+## Layout (2026-10-26)
+- `index.html` is the Direction A studio home and uses `studio.css` only.
+- Inner pages (`games/`, `privacy-policy/`, `terms-of-use/`, `support/`, `404.html`) keep `styles.css`, restyled to match.
+- `app-ads.txt` and `CNAME` stay at the root, byte-identical.

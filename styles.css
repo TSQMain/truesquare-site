@@ -1,11 +1,11 @@
 :root {
-  --bg: #0c0c0e;
+  --bg: #0b0b0d;
   --bg-elev: #16161a;
   --bg-card: #1c1c22;
   --ink: #f2f2f5;
   --muted: #a8a8b3;
   --line: #2a2a32;
-  --amber: #e8a83a;
+  --amber: #f0a93a;
   --amber-soft: #f5c460;
   --amber-dim: rgba(232, 168, 58, 0.14);
   --ok: #7dcea0;
@@ -183,3 +183,26 @@ h1 {
 .social:hover { border-color: var(--amber); color: var(--amber-soft); background: var(--amber-dim); }
 .social svg,
 .social img { display: block; width: 1.05rem; height: 1.05rem; margin: 0; padding: 0; fill: currentColor; }
+
+/* Direction A studio look, shared by inner pages (2026-10-26) */
+h1, h2, .game-feature h3, .coming h3 { font-family: "Barlow Condensed", "Barlow", "Segoe UI", system-ui, sans-serif; text-transform: uppercase; letter-spacing: .01em; }
+h1 { letter-spacing: .005em; }
+.brand { font-family: "Barlow Condensed", "Barlow", sans-serif; font-weight: 800; font-size: 1.25rem; text-transform: uppercase; letter-spacing: .04em; }
+.brand b { color: var(--amber); font-weight: 800; }
+.btn-primary { background: linear-gradient(180deg, #f6be55, #e08b1e); box-shadow: 0 8px 24px rgba(240,169,58,.3); }
+.legal h1, .legal h2 { text-transform: none; }
+.pill.soon { background: rgba(10,10,12,.78); color: var(--amber-soft); border: 1px solid rgba(240,169,58,.5); }
+.soon-chip { display: inline-flex; align-items: center; height: 46px; padding: 0 16px; border-radius: 10px; border: 1px dashed #3a3a44; color: var(--muted); font-weight: 700; font-size: .92rem; }
+@media (min-width: 901px) { .coming { grid-template-columns: repeat(2, 1fr); } }
+.game-media img[src$="amber-wide.jpg"] { object-position: 50% 78%; }
+
+/* real wordmark + mark images (2026-10-26 v2) */
+.brand-logo { gap: 12px; }
+.brand-logo .logo-mark { width: 38px; height: auto; filter: drop-shadow(0 0 10px rgba(240,169,58,.25)); }
+.brand-logo .logo-word { height: 20px; width: auto; }
+.footer-logo { display: inline-flex; margin-bottom: .6rem; }
+.footer-logo .logo-word { height: 18px; }
+@media (max-width: 900px) {
+  .brand-logo .logo-mark { width: 32px; }
+  .brand-logo .logo-word { height: 15px; }
+}

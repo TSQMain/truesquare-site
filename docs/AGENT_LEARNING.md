@@ -14,7 +14,7 @@
 
 1. **Task:** Andrew approved the Amber Fire Data safety addon lines. Add attempt count and score (Amber Fire only) to Section 2(c), reword the Summary and 2(a) lines that said we receive no copy of progress, add one 2(b) line on Android Privacy Sandbox (Topics, Attribution Reporting), set Last updated to 26 October 2026. Keep it true for Sit Tight. Do not merge.
 2. **Approach and cost:** Read both games' scripts/Analytics.gd. Amber Fire (cursor/af1-firebase) sends level, mode, attempts, duration, success, reason, and score on level_start, level_end, and level_continue. Sit Tight 1.1.1 (RedBerth cursor/st-firebase-111, 93c9b7b) sends level, mode, attempts, duration, success, and reason, with no score. Edited only four lines in the HTML and added one paragraph. Cost: $0. No third-party uploads.
-3. **What worked and how it was verified:** Diff shows only those four lines plus the new 2(b) paragraph. No em or en dashes and no `{{` in the new text.
+3. **What worked and how it was verified:** Diff shows only those four lines plus the new 2(b) paragraph. No em or en dashes and no double curly braces in the new text.
 4. **What failed and why:** The policy said saves never reach us, but both games already sent attempts, and Amber Fire also sent score, through Firebase. The round 1 policy described event names without checking event params.
 5. **Lesson:** When a policy names analytics events, list the params of each game from the code, and say which game sends which. Section 6 was also fixed in this round: no accounts, saves on device, and only the limited analytics in Section 2(c) reaches us.
 

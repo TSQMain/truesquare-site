@@ -9,3 +9,13 @@
 5. **Lesson:** Keep legal sources in markdown, with every working note held in a separate NOTES file, and run the internal-note grep on the rendered text before any legal page is committed. Pages deploy from `main`, so a commit there is a publish. On a Jekyll-built Pages repo, any `{{` or `{%` in a .md or .html file (docs included, not just pages) must be wrapped in raw tags, or `.nojekyll` added. Grep for them before pushing and confirm the Pages build is green before fetching the live URLs.
 6. **Footer and measure:** Centred the footer social glyphs in their circles and capped the privacy policy and terms text column at 68ch on desktop. Phone layout unchanged.
 {% endraw %}
+
+2026-10-26 - Privacy policy only: Firebase Analytics, 14-month retention, consent mode, impression-level ad revenue, ad rating T, no in-app or ID-based analytics deletion. Children lines that differ (EU minimum age, future mixed audience, prompt deletion) left for Andrew. Not merged. scrollWidth matched innerWidth at 390 and 1440.
+
+## 2026-10-26 - Privacy wording round 2 (not merged)
+
+1. **Task:** On branch cursor/privacy-firebase-analytics-9b4a, apply the Director decisions: replace the EU minimum-age sentence, keep the future child-directed line, restore support-email deletion with the same analytics limit in sections 6, 7, 8, and the parents paragraph, and use the title Amber Fire: Night Match on the policy and the games catalog. Do not merge.
+2. **Approach and cost:** Edited the existing HTML only. Terms already used that title, so it was not edited. Headless Chrome measured scrollWidth against innerWidth at 1440 and 390. Cost: $0. No third-party uploads.
+3. **What worked and how it was verified:** Privacy and games pages both reported scrollWidth equal to innerWidth at 1440 and at 390. A repo grep for the retired catalog title and the two old age phrases returned no hits. Last updated stayed 25 October 2026.
+4. **What failed and why:** No failed approach this round. The terms page needed no edit because the title was already there.
+5. **Lesson:** When one deletion rule is decided, copy the same sentences into rights, deletion, retention, and the parents paragraph in the same edit. A title change has to include meta descriptions, not only the visible card heading.

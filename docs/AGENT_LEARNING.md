@@ -9,3 +9,5 @@
 5. **Lesson:** Keep legal sources in markdown, with every working note held in a separate NOTES file, and run the internal-note grep on the rendered text before any legal page is committed. Pages deploy from `main`, so a commit there is a publish. On a Jekyll-built Pages repo, any `{{` or `{%` in a .md or .html file (docs included, not just pages) must be wrapped in raw tags, or `.nojekyll` added. Grep for them before pushing and confirm the Pages build is green before fetching the live URLs.
 6. **Footer and measure:** Centred the footer social glyphs in their circles and capped the privacy policy and terms text column at 68ch on desktop. Phone layout unchanged.
 {% endraw %}
+
+2026-10-26 - Privacy policy only: Firebase Analytics, 14-month retention, consent mode, impression-level ad revenue, ad rating T, no in-app or ID-based analytics deletion. Children lines that differ (EU age 16, future mixed audience, prompt deletion) left for Andrew. Not merged. scrollWidth matched innerWidth at 390 and 1440.

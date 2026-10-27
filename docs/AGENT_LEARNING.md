@@ -58,3 +58,21 @@
 - Worked: images displayed at 2x or denser everywhere (hero 120px from 251px source); 0 broken images and no overflow at 1280 and 390 on all 6 pages.
 - Failed: a bulk string replace rewrote the mark src into a bad filename on inner pages and the hero lost its aspect ratio from the new height attribute; both caught by the broken-image and size checks before commit.
 - Lesson: ship brand marks as the real image files from the start, never re-typeset a wordmark in a web font, and always set height auto when adding width and height attributes to a sized image.
+
+## Durable (studio site, seeded 2026-10-27)
+
+- Studio Privacy and Terms are shared across all titles. Same URLs. Update before Firebase or Crashlytics ships. Grep each game analytics event params before claiming no progress copy in policy text.
+- Founder locks legal picks once (governing law, courts, arbitration, age, liability cap, address, effective date). Do not reopen.
+- Jekyll GitHub Pages: any Liquid openers (double curly braces or brace-percent) in markdown must be wrapped in raw tags, or add .nojekyll. Grep before push.
+- Site Direction A (founder pick): real logo mark and wordmark from the approved asset pack. Eye judges logo frames after swaps.
+- Play badge or Coming soon: switch only with founder OK after the store listing is live.
+- Do not commit secrets. No Play JSON, keystores, or google-services.json on the site repo.
+
+## 2026-10-27 Durable seed (Amber Fire exit audit)
+
+1. **Task:** Learning-log audit after Amber Fire 1.0.0 (3) production submit. Site log had dated Privacy and Direction A entries but no Durable block on the PR tree.
+2. **Approach / cost:** Exit pass only. No site commit from Director until this PR. Draft Durable from existing entries. Andrew approved exit docs 2026-10-27 7:31 AM America/New_York; next title TBD with him (not assumed).
+3. **Worked:** Privacy rounds and Direction A logo fix already recorded.
+4. **Failed / why:** Without Durable, the next agent re-reads long PR notes and can re-break Jekyll or policy wording.
+5. **Lesson:** Every studio surface that agents edit gets Durable plus a 5-part Log on day one.
+

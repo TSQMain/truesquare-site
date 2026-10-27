@@ -58,3 +58,10 @@
 - Worked: images displayed at 2x or denser everywhere (hero 120px from 251px source); 0 broken images and no overflow at 1280 and 390 on all 6 pages.
 - Failed: a bulk string replace rewrote the mark src into a bad filename on inner pages and the hero lost its aspect ratio from the new height attribute; both caught by the broken-image and size checks before commit.
 - Lesson: ship brand marks as the real image files from the start, never re-typeset a wordmark in a web font, and always set height auto when adding width and height attributes to a sized image.
+
+## 2026-10-27 - Amber Fire live on Play: site cards switched (PR pending, not merged)
+- Task: the daily live-on-Play routine found https://play.google.com/store/apps/details?id=com.truesquare.amberfire&hl=en_US serving the real listing ("Amber Fire: Night Match - Apps on Google Play") on 2026-10-27 at about 9:15 AM ET, so switch the Amber Fire cards to live the same way Sit Tight is shown.
+- Approach / cost: branched from origin/main ff5be0c. Home card: "Coming soon" status became "Live on Google Play", the dashed "Coming to Google Play" chip and the Instagram launch-news button became the official badge (assets/google-play-badge.png) linking to the Amber Fire listing with the site's usual UTM tags; meta and og descriptions and the launch FAQ now say it is live. Games page: pill "Available now", badge plus YouTube button like Sit Tight, and an "Amber Fire on Google Play" footer link. The card art (amber-wide.jpg) already carries the current title art, so no icon was needed. Local render with python http.server plus headless Chrome at 1280 and 390. About 10 minutes, no paid credits.
+- Worked: both cards match Sit Tight's treatment at desktop and mobile widths with no layout change.
+- Failed / held back: the privacy policy also says Amber Fire is "coming soon"; left untouched in this PR because Sit Tight 1.1.2 (RedBerth PR #7) syncs privacy.html from the site and checks it, so a policy edit should be made together with that sync.
+- Lesson: check other repos that mirror a page (here the privacy policy) before editing it in a small status PR.

@@ -79,3 +79,4 @@
 - Worked: python http.server. Served bytes matched the four sha256 values and video/mp4. Headless Chrome at 1440 and 390: scrollWidth equaled clientWidth, 0 broken images, 0 mp4 requests on load, on home, games, media, both game media pages, privacy, terms, support, and 404. A real click played Earthquake, then Bomb rows paused it. A desktop walkthrough showed the same and the new header on Privacy and Terms.
 - Held back: Home and Games title jpgs still say Slide Car Puzzle and Night Match. They are flat rasters, so they were not redrawn. The policy body still uses the old titles because this task said not to change policy text.
 - Lesson: hash the mp4 after it is in the repo path, and add only a poster beside it. A title baked into a jpg stays until there is new art.
+2026-10-28 - Instagram Reels via Buffer reject >60fps-reported clips; keep 30fps _ig30 copies.

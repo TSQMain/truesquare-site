@@ -25,7 +25,10 @@ Static site for **https://www.truesquaredigital.com** (GitHub Pages).
 ## Local preview
 Open `index.html` via any static server from this folder, e.g. `python3 -m http.server 8080`.
 
-## Layout (2026-10-26)
-- `index.html` is the Direction A studio home and uses `studio.css` only.
-- Inner pages (`games/`, `privacy-policy/`, `terms-of-use/`, `support/`, `404.html`) keep `styles.css`, restyled to match.
+## Layout (2026-10-28)
+- `index.html` is the Direction A studio home and uses `studio.css`.
+- `/media/` (All games, Sit Tight clips, Amber Fire) uses `studio.css` plus `media/media.css`. Clip files under `/media/sit-tight/` are stable URLs. Do not rename or move them.
+- Inner pages (`games/`, `privacy-policy/`, `terms-of-use/`, `support/`, `404.html`) keep `styles.css`.
+- Top nav on every page: Games, Media, Studio, FAQ, Support.
+- Footer links on every page: Games, Media, Studio (`/#studio`), FAQ (`/#faq`), Privacy, Support.
 - `app-ads.txt` and `CNAME` stay at the root, byte-identical.

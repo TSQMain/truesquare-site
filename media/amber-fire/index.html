@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amber Fire clips | TrueSquare Digital</title>
+<meta name="description" content="Gameplay clips from Amber Fire: Night Bubble Match.">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="canonical" href="https://www.truesquaredigital.com/media/amber-fire/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/studio.css">
+<link rel="stylesheet" href="/media/media.css">
+</head>
+<body class="A">
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand brand-logo" href="/" aria-label="TrueSquare Digital home"><img class="logo-mark" src="/assets/tsq-logo-mark.png" width="38" height="39" alt=""><img class="logo-word" src="/assets/tsq-wordmark.png" width="450" height="47" alt="TrueSquare Digital"></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/games/">Games</a>
+      <a href="/media/" aria-current="page">Media</a>
+      <a href="/#studio">Studio</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<div class="media-crumb"><div class="wrap"><p class="eyebrow">Media</p></div></div>
+<div class="pills-bar"><div class="wrap"><nav class="pills" aria-label="Games">
+<a class="pill all" href="/media/">All games</a>
+<a class="pill" href="/media/sit-tight/"><img src="/assets/sittight-icon.png" alt="">Sit Tight<span class="count">4 clips</span></a>
+<a class="pill" href="/media/amber-fire/" aria-current="page"><img src="/assets/amber-icon.png" alt="">Amber Fire<span class="count">Soon</span></a>
+<span class="pill future">More games soon</span></nav></div></div>
+<div class="wrap game-bar"><img class="g-icon" src="/assets/amber-icon.png" alt=""><div class="g-text"><h2>Amber Fire: Night Bubble Match</h2><p>Shoot, match three and hold the line before the night closes in.</p></div><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.truesquare.amberfire&utm_source=website&utm_medium=media&utm_campaign=truesquare_site" rel="noopener" target="_blank"><img src="/assets/google-play-badge.png" width="646" height="250" alt="Get Amber Fire on Google Play"></a></div>
+<section class="clip-section"><div class="wrap"><div class="soon-panel">
+  <div><p class="eyebrow">Clips coming soon</p><h3>The first Amber Fire Shorts are in the edit</h3>
+  <p>They will land here and on our channels at the same time. Until then, here is the live game.</p><div class="follow">
+  <a class="btn btn-ghost btn-sm" href="https://www.youtube.com/@TrueSquareDigital" rel="noopener" target="_blank">YouTube</a>
+  <a class="btn btn-ghost btn-sm" href="https://www.tiktok.com/@truesquaredigital" rel="noopener" target="_blank">TikTok</a>
+  <a class="btn btn-ghost btn-sm" href="https://www.instagram.com/truesquare_digital/" rel="noopener" target="_blank">Instagram</a>
+</div></div>
+  <div class="soon-stills">
+    <figure><img src="/assets/amber-title.jpg" alt="Amber Fire title screen"><figcaption>Title screen</figcaption></figure>
+    <figure><img src="/assets/amber-combo.jpg" alt="Amber Fire x5 combo, RED HOT"><figcaption>Red Hot x5</figcaption></figure>
+    <figure><img src="/assets/amber-clear.jpg" alt="Amber Fire level clear"><figcaption>Level clear</figcaption></figure>
+  </div>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a class="brand brand-logo" href="/" aria-label="TrueSquare Digital home"><img class="logo-mark" src="/assets/tsq-logo-mark.png" width="38" height="39" alt=""><img class="logo-word" src="/assets/tsq-wordmark.png" width="450" height="47" alt="TrueSquare Digital"></a>
+      <p>Independent mobile games. Charcoal nights. Amber exits.</p>
+    </div>
+    <div class="f-links"><a href="/games/">Games</a><a href="/media/">Media</a><a href="/#studio">Studio</a><a href="/#faq">FAQ</a><a href="/privacy-policy/">Privacy</a><a href="/support/">Support</a></div>
+  </div>
+</footer>
+<script>
+/* tap the amber button to play in place; one clip plays at a time */
+document.querySelectorAll('.clip').forEach(function(c){
+  var v=c.querySelector('video'); v.removeAttribute('controls'); /* native controls appear once playing; no-JS keeps them */
+  c.querySelector('.clip-play').addEventListener('click',function(){v.muted=false;v.play();});
+  v.addEventListener('play',function(){c.classList.add('playing');v.setAttribute('controls','');document.querySelectorAll('.clip video').forEach(function(o){if(o!==v)o.pause();});});
+});
+</script>
+</body>
+</html>

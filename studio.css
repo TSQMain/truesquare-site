@@ -1,4 +1,4 @@
-/* TrueSquare Digital studio home, Direction A (dark amber). Used by index.html only; other pages keep styles.css. */
+/* TrueSquare Digital studio home, Direction A (dark amber). Used by index.html and /media/; other pages keep styles.css. */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body { margin: 0; font-family: "Barlow", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; overflow-x: hidden; }

@@ -65,3 +65,10 @@
 - Worked: both cards match Sit Tight's treatment at desktop and mobile widths with no layout change.
 - Failed / held back: the privacy policy also says Amber Fire is "coming soon"; left untouched in this PR because Sit Tight 1.1.2 (RedBerth PR #7) syncs privacy.html from the site and checks it, so a policy edit should be made together with that sync.
 - Lesson: check other repos that mirror a page (here the privacy policy) before editing it in a small status PR.
+
+## 2026-10-28 - Media tab (PR, not merged)
+- Task: Add /media/, /media/sit-tight/, and /media/amber-fire/ from the approved 28 Oct mock. Keep the four Sit Tight clip URLs stable. Nav on every page: Games, Media, Studio, FAQ, Support. Footer links: Games, Media, Studio, FAQ, Privacy, Support. Rename the Play titles on home and games only.
+- Approach / cost: Copied the prototype HTML, media.css, posters, mp4s, and the three new images byte for byte, then removed the mock banner and noindex. Media pages use the existing studio.css plus media.css. Inner pages stay on styles.css. Home and games titles only. Cost: $0. No third-party uploads.
+- Worked: Headless Chrome. scrollWidth equaled innerWidth at 1440 and at 390 on home, games, all three media pages, support, privacy, terms, and 404. No broken images. Every local link returned 200. All four mp4s are video/mp4. A real click plays one clip unmuted with controls and pauses the other. No mp4 bytes load before that click.
+- Failed: A scripted element.click() is not a user gesture, so the first play check looked stuck even though the handler ran. A real mouse event played the file. The "More games soon" pill draws past 390 inside the horizontal pill scroller. Page scroll width stayed 390.
+- Lesson: Ship the approved DOM and CSS, and strip mock-only chrome (the red banner and noindex) before the PR. Prove playback with a real mouse event. Leave the privacy and terms body alone when the task says so. Their shared header and footer still change, so a mirror that hashes the whole file will see a diff.

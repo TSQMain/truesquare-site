@@ -80,3 +80,4 @@
 - Held back: Home and Games title jpgs still say Slide Car Puzzle and Night Match. They are flat rasters, so they were not redrawn. The policy body still uses the old titles because this task said not to change policy text.
 - Lesson: hash the mp4 after it is in the repo path, and add only a poster beside it. A title baked into a jpg stays until there is new art.
 2026-10-28 - Instagram Reels via Buffer reject >60fps-reported clips; keep 30fps _ig30 copies.
+2026-11-02 - Link-in-bio /yt/, /tt/, and /ig/ reuse the studio header, footer, studio.css, and the media game row. Play links use a referrer (youtube, tiktok, or instagram with social, and website with web, campaign tsq_organic). Local render: no broken images, scrollWidth matched clientWidth at 1280 and 390.

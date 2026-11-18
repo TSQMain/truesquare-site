@@ -81,3 +81,11 @@
 - Lesson: hash the mp4 after it is in the repo path, and add only a poster beside it. A title baked into a jpg stays until there is new art.
 2026-10-28 - Instagram Reels via Buffer reject >60fps-reported clips; keep 30fps _ig30 copies.
 2026-11-02 - Link-in-bio /yt/, /tt/, and /ig/ reuse the studio header, footer, studio.css, and the media game row. Play links use a referrer (youtube, tiktok, or instagram with social, and website with web, campaign tsq_organic). Local render: no broken images, scrollWidth matched clientWidth at 1280 and 390.
+
+## 2026-11-17 - Full maintenance pass (web)
+
+1. **Task:** Audit all pages, links, Play links, app-ads.txt, privacy, sitemap, robots, meta and Open Graph; draft a Shatterwave coming-soon card; triage PRs #11 and #8. Nothing merged.
+2. **Approach and cost:** Scripted link and meta crawl of every HTML file, curl status check of the live site, live Play page title check. Cost: $0.
+3. **Result:** 0 broken internal links, 0 broken Play links, every page 200, app-ads.txt exact. Fixed: em dashes in five page titles, and stale game names on Privacy and Terms (Slide Car Puzzle, Night Match) that did not match the live Play titles.
+4. **Open:** Privacy text for Shatterwave still says no in-app purchases and ads off in the first release. The Play SKU shatterwave_remove_forced_ads is active, so ads-analytics and the founder must confirm before launch.
+5. **Lesson:** Compare site and legal game names against the live Play title, not an earlier Director decision.

@@ -89,3 +89,10 @@
 3. **Result:** 0 broken internal links, 0 broken Play links, every page 200, app-ads.txt exact. Fixed: em dashes in five page titles, and stale game names on Privacy and Terms (Slide Car Puzzle, Night Match) that did not match the live Play titles.
 4. **Open:** Privacy text for Shatterwave still says no in-app purchases and ads off in the first release. The Play SKU shatterwave_remove_forced_ads is active, so ads-analytics and the founder must confirm before launch.
 5. **Lesson:** Compare site and legal game names against the live Play title, not an earlier Director decision.
+
+## 2026-11-17 - Shatterwave privacy draft (web, PR draft, not merged)
+1. **Task:** Fix every Shatterwave gap in the privacy policy from the ads-analytics fact sheet (ads on, purchase, AD_ID and permissions, Remote Config and Play update/review, analytics timing, IP-derived location, share sheet). Founder approves before merge.
+2. **Approach and cost:** Edited only privacy-policy/index.html, using the fact sheet's file:line evidence. Terms of use had no Shatterwave-specific claims, so it was left alone. Cost: $0.
+3. **Result:** Date set to 17 November 2026. Sit Tight and Amber Fire text untouched except the shared score sentence, which now names Shatterwave.
+4. **Open:** Sit Tight (RedBerth) mirrors this file, so the sync check must be rerun if this merges. The "coming soon" status wording for Shatterwave is unchanged until launch. Items in the fact sheet's "Could not verify" list remain open.
+5. **Lesson:** Describe analytics timing by actual behavior and point to "consent signals where required", so a later Consent Mode change does not make the policy wrong.

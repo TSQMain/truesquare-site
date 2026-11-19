@@ -96,3 +96,10 @@
 3. **Result:** Date set to 17 November 2026. Sit Tight and Amber Fire text untouched except the shared score sentence, which now names Shatterwave.
 4. **Open:** Sit Tight (RedBerth) mirrors this file, so the sync check must be rerun if this merges. The "coming soon" status wording for Shatterwave is unchanged until launch. Items in the fact sheet's "Could not verify" list remain open.
 5. **Lesson:** Describe analytics timing by actual behavior and point to "consent signals where required", so a later Consent Mode change does not make the policy wrong.
+
+## 2026-11-19 - Shatterwave launch prep (web, draft PR, not merged)
+1. **Task:** Prep the site for Shatterwave's public release: game page, home and games cards, sitemap, privacy and app-ads check.
+2. **Approach and cost:** No per-game pages existed, so /games/shatterwave/ reuses the games-index card (game-feature) plus a screens row, with the same header and footer. Screens are resized real captures from the game repo docs/captures. Cost: $0.
+3. **Result:** Privacy already covered AdMob with UMP, Firebase Analytics, Crashlytics, Remote Config and Play Billing (PR #26). Only gap: "coming soon" status on the title list, fixed in a separate commit. app-ads.txt already has pub-5155911610089674, unchanged. All changed pages and assets return 200 locally.
+4. **Open:** Merge only when the Play listing is public. Screens are early captures, to be replaced with release-build ones. Boss plurality in captures is unconfirmed, so copy never states a number of bosses.
+5. **Lesson:** Headless Chrome will not render below about 500 px wide, so a 390 px screenshot looks cropped. Shoot at 500 for a mobile check.

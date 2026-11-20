@@ -1,32 +1,6 @@
-{% raw %}
-## 2026-10-19 — Studio-wide Privacy Policy + Terms of Use publish (TSQ-Build)
+# Agent learning log (truesquare-site)
 
-1. **Date and task:** 19 Oct 2026. Replaced the Sit Tight-only `privacy-policy/` and `terms-of-use/` pages with studio-wide TrueSquare Digital documents covering all games, past, present and future, operated by AP Finish Carpentry LLC. Same URLs. Andrew approved the picks at 7:05 AM ET: Ohio law, Fairfield County courts, no arbitration, 13+, $50 cap, address published, effective date = publish date.
-2. **Approach, tool and cost:** Markdown sources were finalized on the box and converted to HTML (python-markdown) inside the existing page template (header, footer and `/styles.css` unchanged; only `<main class="wrap legal">` and the meta descriptions were replaced). Committed to `main` (the Pages source): publish commit b65e2a9, Pages deploy 251d1d6. Rendered with headless Chrome via Playwright at 390x844 DPR 3 and 1440x900. Cost: $0, no third-party uploads.
-3. **What worked and how it was verified:** The visible-text grep for `[`, `]`, TODO, NOTE, TBD, draft, PLACEHOLDER, "must match" and `{{` found 0 hits on both pages. The live fetch shows "Effective date: 19 October 2026". scrollWidth equals innerWidth at 390 px, so there is no horizontal scroll.
-4. **What failed and why:** The first publish broke the whole GitHub Pages (Jekyll) build. A markdown doc in the repo contained a literal `{{`, and Jekyll's Liquid parser treated it as a template tag, so the deploy failed for every page. It was fixed by wrapping that text in `{% raw %}` … `{% endraw %}`; Pages then deployed 251d1d6 (publish commit b65e2a9) at 7:30 AM ET. Separately, the old live privacy page had shown the internal reminder "This policy must match the Play Data safety form" to the public, because the port from Google Sites copied working notes into page copy.
-{% raw %}
-5. **Lesson:** Keep legal sources in markdown, with every working note held in a separate NOTES file, and run the internal-note grep on the rendered text before any legal page is committed. Pages deploy from `main`, so a commit there is a publish. On a Jekyll-built Pages repo, any `{{` or `{%` in a .md or .html file (docs included, not just pages) must be wrapped in raw tags, or `.nojekyll` added. Grep for them before pushing and confirm the Pages build is green before fetching the live URLs.
-6. **Footer and measure:** Centred the footer social glyphs in their circles and capped the privacy policy and terms text column at 68ch on desktop. Phone layout unchanged.
-{% endraw %}
-
-## 2026-10-26 - Privacy policy round 3: score, attempts, Privacy Sandbox (not merged)
-
-1. **Task:** Andrew approved the Amber Fire Data safety addon lines. Add attempt count and score (Amber Fire only) to Section 2(c), reword the Summary and 2(a) lines that said we receive no copy of progress, add one 2(b) line on Android Privacy Sandbox (Topics, Attribution Reporting), set Last updated to 26 October 2026. Keep it true for Sit Tight. Do not merge.
-2. **Approach and cost:** Read both games' scripts/Analytics.gd. Amber Fire (cursor/af1-firebase) sends level, mode, attempts, duration, success, reason, and score on level_start, level_end, and level_continue. Sit Tight 1.1.1 (RedBerth cursor/st-firebase-111, 93c9b7b) sends level, mode, attempts, duration, success, and reason, with no score. Edited only four lines in the HTML and added one paragraph. Cost: $0. No third-party uploads.
-3. **What worked and how it was verified:** Diff shows only those four lines plus the new 2(b) paragraph. No em or en dashes and no double curly braces in the new text.
-4. **What failed and why:** The policy said saves never reach us, but both games already sent attempts, and Amber Fire also sent score, through Firebase. The round 1 policy described event names without checking event params.
-5. **Lesson:** When a policy names analytics events, list the params of each game from the code, and say which game sends which. Section 6 was also fixed in this round: no accounts, saves on device, and only the limited analytics in Section 2(c) reaches us.
-
-2026-10-26 - Privacy policy only: Firebase Analytics, 14-month retention, consent mode, impression-level ad revenue, ad rating T, no in-app or ID-based analytics deletion. Children lines that differ (EU minimum age, future mixed audience, prompt deletion) left for Andrew. Not merged. scrollWidth matched innerWidth at 390 and 1440.
-
-## 2026-10-26 - Privacy wording round 2 (not merged)
-
-1. **Task:** On branch cursor/privacy-firebase-analytics-9b4a, apply the Director decisions: replace the EU minimum-age sentence, keep the future child-directed line, restore support-email deletion with the same analytics limit in sections 6, 7, 8, and the parents paragraph, and use the title Amber Fire: Night Match on the policy and the games catalog. Do not merge.
-2. **Approach and cost:** Edited the existing HTML only. Terms already used that title, so it was not edited. Headless Chrome measured scrollWidth against innerWidth at 1440 and 390. Cost: $0. No third-party uploads.
-3. **What worked and how it was verified:** Privacy and games pages both reported scrollWidth equal to innerWidth at 1440 and at 390. A repo grep for the retired catalog title and the two old age phrases returned no hits. Last updated stayed 25 October 2026.
-4. **What failed and why:** No failed approach this round. The terms page needed no edit because the title was already there.
-5. **Lesson:** When one deletion rule is decided, copy the same sentences into rights, deletion, retention, and the parents paragraph in the same edit. A title change has to include meta descriptions, not only the visible card heading.
+New entries: one line each: `YYYY-MM-DD | task | failed because | tried instead | result/lesson`. Older entries: AGENT_LEARNING_ARCHIVE.md. Studio-wide lessons: StudioDrive/studio-brain/lessons.md.
 
 ## 2026-10-25 - Privacy policy Firebase/analytics update
 
@@ -96,3 +70,11 @@
 3. **Result:** Date set to 17 November 2026. Sit Tight and Amber Fire text untouched except the shared score sentence, which now names Shatterwave.
 4. **Open:** Sit Tight (RedBerth) mirrors this file, so the sync check must be rerun if this merges. The "coming soon" status wording for Shatterwave is unchanged until launch. Items in the fact sheet's "Could not verify" list remain open.
 5. **Lesson:** Describe analytics timing by actual behavior and point to "consent signals where required", so a later Consent Mode change does not make the policy wrong.
+
+## 2026-11-19 - Shatterwave launch prep (web, draft PR, not merged)
+1. **Task:** Prep the site for Shatterwave's public release: game page, home and games cards, sitemap, privacy and app-ads check.
+2. **Approach and cost:** No per-game pages existed, so /games/shatterwave/ reuses the games-index card (game-feature) plus a screens row, with the same header and footer. Screens are resized real captures from the game repo docs/captures. Cost: $0.
+3. **Result:** Privacy already covered AdMob with UMP, Firebase Analytics, Crashlytics, Remote Config and Play Billing (PR #26). Only gap: "coming soon" status on the title list, fixed in a separate commit. app-ads.txt already has pub-5155911610089674, unchanged. All changed pages and assets return 200 locally.
+4. **Open:** Merge only when the Play listing is public. Screens are early captures, to be replaced with release-build ones. Boss plurality in captures is unconfirmed, so copy never states a number of bosses.
+5. **Lesson:** Headless Chrome will not render below about 500 px wide, so a 390 px screenshot looks cropped. Shoot at 500 for a mobile check.
+2026-11-19 | Shatterwave site launch copy (PR #28) | copy still said level is the song / timed boss and used early screenshots | matched page to final 0.1.8 listing, swapped in 4 store shots (resized to 540x960 jpg) | page ready, merge only when Play page is live

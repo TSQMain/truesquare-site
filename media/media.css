@@ -104,3 +104,5 @@
   .soon-panel h3 { font-size: 1.6rem; }
   .soon-stills { gap: 8px; }
 }
+.clip.wide { grid-column: span 2; }
+.clip.wide .clip-frame { aspect-ratio: 16/9; }
